@@ -2,7 +2,9 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
              xmlns:g="urn:import:com.google.gwt.user.client.ui">
     <g:HTMLPanel ui:field="main">
-        <g:Button ui:field="btn_clickMe" text="Click Me"/>
+        <g:TextBox ui:field="txt_email"/>
+        <g:TextBox ui:field="txt_password"/>
+        <g:Button ui:field="btn_login" text="Sign in"/>
         <g:Label ui:field="lbl_result"/>
     </g:HTMLPanel>
 </ui:UiBinder>

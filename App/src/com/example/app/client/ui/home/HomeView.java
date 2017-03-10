@@ -1,54 +1,72 @@
 package com.example.app.client.ui.home;
 
-import com.example.app.client.appService;
+import com.example.app.client.proxy.UserProxy;
+import com.example.app.shared.service.MyRequestFactory;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
+import com.google.web.bindery.requestfactory.shared.Receiver;
+import com.google.web.bindery.requestfactory.shared.ServerFailure;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
 public class HomeView extends ViewWithUiHandlers<HomeUiHandlers> implements HomePresenter.MyView {
     interface Binder extends UiBinder<Widget, HomeView> {
     }
 
+    private final MyRequestFactory requestFactory;
+
     @UiField
     HTMLPanel main;
     @UiField
-    Button btn_clickMe;
+    TextBox txt_email;
+    @UiField
+    TextBox txt_password;
+    @UiField
+    Button btn_login;
     @UiField
     Label lbl_result;
 
     @Inject
-    HomeView(Binder uiBinder) {
+    HomeView(
+            Binder uiBinder,
+            MyRequestFactory requestFactory
+        ) {
         initWidget(uiBinder.createAndBindUi(this));
 
-        btn_clickMe.addClickHandler(new ClickHandler() {
+        this.requestFactory = requestFactory;
+
+        btn_login.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
-                if (lbl_result.getText().equals("")) {
-                    appService.App.getInstance().getMessage("Hello, World!", new MyAsyncCallback(lbl_result));
-                } else {
-                    lbl_result.setText("");
-                }
+                checkLogin();
             }
         });
     }
 
-    private static class MyAsyncCallback implements AsyncCallback<String> {
-        private Label label;
+    private void checkLogin() {
 
-        public MyAsyncCallback(Label label) {
-            this.label = label;
-        }
+        String email = txt_email.getText();
+        String password = txt_password.getText();
 
-        public void onSuccess(String result) {
-            label.getElement().setInnerHTML(result);
-        }
-
-        public void onFailure(Throwable throwable) {
-            label.setText("Failed to receive answer from server!");
-        }
+        requestFactory.userRequest().authenticate(email,password).fire(
+                new Receiver<UserProxy>() {
+                    @Override
+                    public void onSuccess(UserProxy user) {
+                        if (user != null) {
+                            lbl_result.setText("User logged in");
+                        } else {
+                            lbl_result.setText("Invalid credentials");
+                        }
+                    }
+                    @Override
+                    public void onFailure(ServerFailure error) {
+                        Window.alert(error.getMessage() + error.getStackTraceString());
+                    }
+                });
     }
+
 }

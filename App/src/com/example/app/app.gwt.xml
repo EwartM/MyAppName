@@ -17,7 +17,7 @@
     <source path="client"/>
     <source path="shared"/>
 
-    <!-- Specify the app servlets.                   -->
-    <servlet path='/appService' class='com.example.app.server.appServiceImpl'/>
+    <!-- Request Factory -->
+    <inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
 
 </module>
