@@ -1,0 +1,8 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:HTMLPanel ui:field="main">
+        <g:Button ui:field="btn_clickMe" text="Click Me"/>
+        <g:Label ui:field="lbl_result"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -4,10 +4,18 @@
 
     <!-- Inherit the core Web Toolkit stuff.                  -->
     <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.google.gwt.inject.Inject' />
+    <inherits name="com.google.gwt.i18n.I18N"/>
 
-    <!-- Specify the app entry point class.                   -->
-    <entry-point class='com.example.app.client.app'/>
-
+    <!-- GWTP -->
+    <inherits name='com.gwtplatform.mvp.Mvp'/>
+    <entry-point class='com.example.app.client.MyEntryPoint'/>
+    <!-- GIN -->
+    <extend-configuration-property name="gin.ginjector.modules"
+                                   value="com.example.app.client.gin.ClientModule"/>
+    <!-- Specify the paths for translatable code -->
+    <source path="client"/>
+    <source path="shared"/>
 
     <!-- Specify the app servlets.                   -->
     <servlet path='/appService' class='com.example.app.server.appServiceImpl'/>
