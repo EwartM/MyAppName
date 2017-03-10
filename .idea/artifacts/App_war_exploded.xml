@@ -40,6 +40,8 @@
           <element id="file-copy" path="$PROJECT_DIR$/build/exploded/WEB-INF/lib/validation-api-1.0.0.GA-sources.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/build/exploded/WEB-INF/lib/hibernate-validator-4.1.0.Final-sources.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/build/exploded/WEB-INF/lib/hibernate-validator-annotation-processor-4.1.0.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/build/exploded/WEB-INF/lib/requestfactory-apt-2.8.0-beta1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/build/exploded/WEB-INF/lib/requestfactory-server-2.8.0-beta1.jar" />
         </element>
       </element>
       <element id="gwt-compiler-output" facet="App/gwt/GWT" />

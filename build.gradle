@@ -15,6 +15,7 @@ ext{
     hibernateVer = '4.1.0.Final'
     sl4jVer = '1.6.1'
     gwtqueryVer = '1.4.3'
+    requestFactoryVer = '2.8.0-beta1'
 }
 dependencies {
     compile group: 'com.gwtplatform', name: 'gwtp-mvp-client', version: gwtpVer
@@ -36,6 +37,9 @@ dependencies {
     }
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: sl4jVer
     compile group: 'com.googlecode.gwtquery', name: 'gwtquery', version: gwtqueryVer
+    compile group: 'com.google.web.bindery', name: 'requestfactory-server', version: requestFactoryVer
+    compile group: 'com.google.web.bindery', name: 'requestfactory-apt', version: requestFactoryVer
+
 
     testCompile 'junit:junit:4.11'
 }
