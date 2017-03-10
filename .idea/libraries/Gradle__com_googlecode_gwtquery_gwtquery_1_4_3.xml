@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.googlecode.gwtquery:gwtquery:1.4.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.gwtquery/gwtquery/1.4.3/a731a68d53b5c326a0eeddbc15c89e181580f686/gwtquery-1.4.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.gwtquery/gwtquery/1.4.3/f67bf3fc9f8c5ffda3e514fd3ede14c476f7510c/gwtquery-1.4.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

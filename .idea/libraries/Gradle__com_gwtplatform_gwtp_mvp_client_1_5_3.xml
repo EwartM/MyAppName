@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gwtplatform:gwtp-mvp-client:1.5.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gwtplatform/gwtp-mvp-client/1.5.3/f365e9b92baaab1cae3e11cc04e8a324d98a6510/gwtp-mvp-client-1.5.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gwtplatform/gwtp-mvp-client/1.5.3/e37a642851ab6d79b5e7922fa1f868468eb58bf4/gwtp-mvp-client-1.5.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

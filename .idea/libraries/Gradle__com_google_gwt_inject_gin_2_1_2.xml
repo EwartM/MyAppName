@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.gwt.inject:gin:2.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt.inject/gin/2.1.2/eb47e8676a4d851a1c16c0e660b98ee7bb889598/gin-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt.inject/gin/2.1.2/791c21452fd5949e2bcc574141869b3a06bc67b1/gin-2.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
